@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Ejidey Schools</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header (same as index - copy header block from index.html) -->
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">
+        <img id="logo" src="assets/logo.png" alt="Ejidey Schools Logo" />
+        <div class="brand-text">
+          <h1>Ejidey Schools</h1>
+          <p class="tag">Nursery • Primary • Secondary</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="admissions.html">Admissions</a>
+        <a href="academics.html">Academics</a><a href="fees.html">Fees & Payments</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>About Ejidey Schools</h2>
+    <p><strong>Mission:</strong> To provide holistic education grounded in faith, strong values and academic excellence.</p>
+    <p><strong>Vision:</strong> To raise confident, responsible and innovative leaders for our community and beyond.</p>
+
+    <section>
+      <h3>Our Leadership</h3>
+      <div class="staff">
+        <img src="assets/photo_principal.jpg" alt="Principal photo">
+        <div>
+          <h4>Principal / Head of School</h4>
+          <p>Name of Principal (placeholder) — Brief biography should be placed here. Use `photo_principal.jpg` for the headshot.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Our Values</h3>
+      <ul>
+        <li>Discipline & Respect</li>
+        <li>Academic Rigor</li>
+        <li>Compassion & Community Service</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container center-text">&copy; <span id="year2"></span> Ejidey Schools</div>
+  </footer>
+
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+</body>
+</html>

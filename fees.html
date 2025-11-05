@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Fees & Payments — Ejidey Schools</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <!-- header -->
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">
+        <img id="logo" src="assets/logo.png" alt="Ejidey Schools Logo" />
+        <div class="brand-text"><h1>Ejidey Schools</h1><p class="tag">Fees & Payments</p></div>
+      </div>
+      <nav class="main-nav"><a href="index.html">Home</a><a href="admissions.html">Admissions</a><a href="fees.html">Fees</a><a href="contact.html">Contact</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Pay School Fees</h2>
+    <p>Use the form below to pay tuition or application fees. The demo uses Paystack inline mode (frontend). For production you should create transactions on a secure backend and verify webhooks. See README for backend sample.</p>
+
+    <form id="feesForm">
+      <label>Student Full Name<input name="student_name" required placeholder="John Doe"></label>
+      <label>Student Class<select name="student_class"><option>Nursery</option><option>Primary</option><option>Secondary</option></select></label>
+      <label>Fee Type<select name="fee_type"><option>Tuition</option><option>Application</option><option>Transport</option></select></label>
+      <label>Amount (NGN)<input name="amount" type="number" value="50000" required></label>
+      <label>Parent Email <input name="parent_email" type="email" placeholder="parent@example.com"></label>
+      <button class="btn" type="submit">Pay with Card / USSD (Paystack)</button>
+    </form>
+
+    <!-- <p class="muted">Placeholders to replace:</p>
+    <ul>
+      <li><strong>PAYSTACK_PUBLIC_KEY</strong> — replace with your Paystack public key.</li>
+      <li>If you prefer server-side: point fetch to <code>/api/create-transaction</code> which returns <code>checkout_url</code>.</li>
+    </ul> -->
+  </main>
+
+  <footer class="site-footer"><div class="container center-text">&copy; <span id="year5"></span> Ejidey Schools</div></footer>
+
+  <!-- Paystack inline script is loaded dynamically in app.js -->
+  <script src="app.js"></script>
+  <script>document.getElementById('year5').textContent = new Date().getFullYear();</script>
+</body>
+</html>

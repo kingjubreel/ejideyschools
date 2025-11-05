@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Admissions — Ejidey Schools</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <!-- header (same as index) -->
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">
+        <img id="logo" src="assets/logo.png" alt="Ejidey Schools Logo" />
+        <div class="brand-text"><h1>Ejidey Schools</h1><p class="tag">Admissions</p></div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="admissions.html">Admissions</a><a href="fees.html">Fees & Payments</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Admissions</h2>
+    <p>Please follow these steps to apply:</p>
+    <ol>
+      <li>Download and complete the admission form: <a href="assets/admission_form.pdf" download>admission_form.pdf</a></li>
+      <li>Submit completed form and required documents to admissions@ejideyschools.ng (placeholder email).</li>
+      <li>Pay the non-refundable application fee online via our <a href="fees.html">payments page</a> or at the school office.</li>
+      <li>Shortlisted applicants will be contacted by phone or email for assessment / interview.</li>
+    </ol>
+
+    <section id="policies">
+      <h3>Admissions Policies & Requirements</h3>
+      <ul>
+        <li>Birth certificate or age declaration.</li>
+        <li>Passport photographs (2).</li>
+        <li>Previous school records (if applicable).</li>
+        <li>Parental/guardian ID and contact details.</li>
+      </ul>
+    </section>
+
+    <section class="apply">
+      <h3>Quick Online Application</h3>
+      <form id="applyForm">
+        <label>Child's Full Name <input name="child_name" required></label>
+        <label>Birth Date <input name="birth_date" type="date" required></label>
+        <label>Applying For <select name="level"><option>Nursery</option><option>Primary</option><option>Secondary</option></select></label>
+        <label>Parent/Guardian Name <input name="parent_name" required></label>
+        <label>Parent Email <input name="parent_email" type="email" required placeholder="parent@example.com"></label>
+        <label>Phone Number <input name="parent_phone" required></label>
+        <button class="btn" type="submit">Submit Application</button>
+      </form>
+      <p class="muted">This form sends the application to the school inbox (frontend demo only). For production, hook to your backend or Google Forms / Airtable.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container center-text">&copy; <span id="year3"></span> Ejidey Schools</div>
+  </footer>
+
+  <script>
+    document.getElementById('year3').textContent = new Date().getFullYear();
+    document.getElementById('applyForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      alert('Application received (demo). Replace with backend endpoint to store applications or send email.');
+    });
+  </script>
+</body>
+</html>
